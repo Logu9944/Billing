@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#102A43"/>
+      <stop offset="50%" stop-color="#173B63"/>
+      <stop offset="100%" stop-color="#0B1D2E"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#F4C542"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#F4C542" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="dropGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Rounded App Icon Background -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Border Glow -->
+  <rect x="6" y="6" width="500" height="500" rx="106" fill="none" stroke="url(#accentGrad)" stroke-width="3" stroke-opacity="0.35"/>
+
+  <!-- Background Decorative Geometric Lines -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.15" stroke-dasharray="8 8"/>
+  <circle cx="256" cy="256" r="220" fill="none" stroke="#F4C542" stroke-width="1" stroke-opacity="0.1"/>
+
+  <!-- Central Symbol Container -->
+  <g filter="url(#dropGlow)">
+    <!-- Stylized "L" + Ledger Currency Symbol -->
+    <path d="M 176 136 
+             L 220 136 
+             L 220 332 
+             L 348 332 
+             L 348 376 
+             L 176 376 Z" 
+          fill="url(#accentGrad)"/>
+    
+    <!-- Dynamic Forward Growth Arrow / Checkmark -->
+    <polygon points="310,230 366,174 336,174 336,150 400,150 400,214 376,214 376,184 322,238" 
+             fill="#38BDF8"/>
+    
+    <!-- Ledger Balance Nodes -->
+    <circle cx="220" cy="150" r="12" fill="#FFFFFF"/>
+    <circle cx="348" cy="354" r="12" fill="#FFFFFF"/>
+    <circle cx="400" cy="150" r="10" fill="#F4C542"/>
+  </g>
+
+  <!-- Currency / Ledger Floating Elements -->
+  <text x="256" y="440" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+        font-size="34" 
+        font-weight="800" 
+        fill="#FFFFFF" 
+        text-anchor="middle" 
+        letter-spacing="4">FINBILLING</text>
+  <text x="256" y="470" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+        font-size="16" 
+        font-weight="600" 
+        fill="#38BDF8" 
+        text-anchor="middle" 
+        letter-spacing="2">LEVROUN ENTERPRISE</text>
+</svg>

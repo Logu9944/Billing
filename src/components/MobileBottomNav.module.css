@@ -1,0 +1,67 @@
+.bottomBar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .bottomBar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: #102A43;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.25);
+    z-index: 95;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .navItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    color: #94A3B8;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: color 0.15s ease, background 0.15s ease;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .navItemActive {
+    color: #38BDF8;
+  }
+
+  .navItemActive svg {
+    stroke: #38BDF8;
+  }
+
+  .centerActionBtn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #38BDF8, #2563EB);
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(56, 189, 248, 0.4);
+    transform: translateY(-8px);
+    transition: transform 0.15s ease;
+  }
+
+  .centerActionBtn:hover, .centerActionBtn:active {
+    transform: translateY(-10px) scale(1.05);
+  }
+}
