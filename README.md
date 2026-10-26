@@ -167,4 +167,5 @@ Server will be accessible at: `http://localhost:3000`
 1. **Exchange Rate Feeds**: The platform currently utilizes a configurable rate provider architecture set to `MANUAL` with fallback rates. RBI and ECB API connectors can be activated via provider flags in `OrganizationSettings`.
 2. **Multi-Currency Bank Accounts**: The standard setup assumes bank accounts in base currency (INR) and foreign currency customer receipts. Multi-currency foreign exchange bank accounts can be added by assigning specific currency codes to individual Account records.
 #   B i l l i n g -  
+ #   B i l l i n g -  
  
